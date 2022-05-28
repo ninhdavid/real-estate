@@ -5,6 +5,13 @@
           box-sizing: border-box;
 }
 
+body a {
+  color: #444444;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
 .main-nav {
   background-color: #fff;
   width: 100%;
@@ -162,6 +169,17 @@
   border-radius: 12px;
 }
 
+.house-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.4);
+}
+
 .type-list-des > i {
   position: absolute;
   left: 10%;
@@ -180,6 +198,11 @@
   position: absolute;
   left: 10%;
   top: 45%;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #fff;
+  text-align: left;
 }
 
 .list-price {
@@ -259,7 +282,34 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(20, 20, 20, 0.4);
+}
+
+.station-des-icon {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.station-des-icon > .station-icon {
+  width: 30px;
+  height: 30px;
+  background: url("/asset/img/icon/circle-right.png") top center/cover no-repeat;
+}
+
+.station-des > p {
+  position: relative;
+  padding-left: 10px;
+  top: 25%;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #fff;
+  text-align: left;
+}
+
+.station-des > p > span {
+  font-size: 1.6em;
 }
 
 .map-list {
@@ -284,6 +334,12 @@
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
   width: 1200px;
+  grid-column-gap: 1.2em;
+  grid-row-gap: 1em;
+}
+
+.house-1, .house-2, .house-3 {
+  text-align: left;
 }
 
 .house-1 {
@@ -291,21 +347,45 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: a;
-  background-color: red;
+}
+
+.item-img {
+  line-height: 0;
+  height: 260px;
+  background: no-repeat center / cover;
+}
+
+.item-text {
+  border: 1px solid #eeeeee;
+  padding: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.item-text .title {
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: #30bedb;
+  font-size: 18px;
+  font-size: 1.2857142857rem;
+  font-weight: bold;
+}
+
+.item-text .text {
+  font-size: 1rem;
 }
 
 .house-2 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: b;
-  background-color: blue;
 }
 
 .house-3 {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   grid-area: c;
-  background-color: green;
 }
 
 .house-4 {
